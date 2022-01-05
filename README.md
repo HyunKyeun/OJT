@@ -22,7 +22,7 @@
 ***
 ## -5주차(1/24 ~ 1/31)
     * Mongo 서버 및 접속 환경 구축 
-    * \[Mongo] \[3] 문서 클론 코딩
+    * [Mongo][3] 문서 클론 코딩
     * Git에 소스코드 관리
     * 주석을 통해 소스코드 해석 및 학습, README.md 관리 
 *****
@@ -53,8 +53,6 @@
 ### 3. abcd
     - 해결
 
-
-
-\ [1]: https://nextjs.org/
-\ [2]: https://nestjs.com/
-\ [3]: https://mongoosejs.com/
+ [1]: https://nextjs.org
+ [2]: https://nestjs.com
+ [3]: https://mongoosejs.com
