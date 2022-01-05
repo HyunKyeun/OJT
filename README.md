@@ -41,10 +41,11 @@
         git status // untracked 파일 확인   
         git add Filename // track 상태로 만들기
         git commit -m "message" // comment 추가  
-        git push // git 저장소에 track 파일 올리기
-1-2. 개인 저장소, 로컬 서버 저장소 pull, push 확인
-    - main으로 저장한 default branch에 push 및 pull 확인
-    - 로컬서버에서 허가요청을 받아 같은 repo에 다른 branch로 push 및 pull 확인 
+        git push // git 저장소에 track 파일 올리기   
+1-2. 개인 저장소, 로컬 서버 저장소 pull, push 확인   
+    - main으로 저장한 default branch에 push 및 pull 확인   
+    - 로컬서버에서 허가요청을 받아 같은 repo에 다른 branch로 push 및 pull 확인   
+    - 다른 branch에서 받아와서 main branch에 push 확인  
 2-1. SSH 접속 
     - VSC 내에 "Remote - SSH" Extension을 이용   
     Hostname, User, Port 설정   
