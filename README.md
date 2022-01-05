@@ -27,7 +27,7 @@
     * 주석을 통해 소스코드 해석 및 학습, README.md 관리 
 *****
 # Issue
-1-1. Git 사용법 숙지 및 사용법
+1-1. Git 사용법 숙지 및 사용법   
     - git 저장소 생성 및 remote 설정
         git Bash를 통해 작업 폴더 접근   
         git init // 저장소 생성   
@@ -36,7 +36,7 @@
     - 원격(git 저장소) -> 로컬(개인 저장소)   
         git fetch // 저장소의 최신 이력 확인 (only)   
         git merge -a // 이력을 토대로 내부에 저장   
-        git pull // fetch + merge를 한번에 
+        git pull // fetch + merge를 한번에    
     - 로컬(개인 저장소) -> 원격(Git 저장소)   
         git status // untracked 파일 확인   
         git add Filename // track 상태로 만들기
