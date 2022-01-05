@@ -46,7 +46,7 @@
     - main으로 저장한 default branch에 push 및 pull 확인   
     - 로컬서버에서 허가요청을 받아 같은 repo에 다른 branch로 push 및 pull 확인   
     - 다른 branch에서 받아와서 main branch에 push 확인  
-2-1. __SSH 접속__ 
+2-1. __SSH 접속__     
     - VSC 내에 "Remote - SSH" Extension을 이용   
     Hostname, User, Port 설정   
     접속후 리눅스 터미널창을 통해 접속 확인    
