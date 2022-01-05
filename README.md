@@ -11,18 +11,18 @@
     * Git 사용법 및 README.md 수정
 ***
 ## -3주차(1/10 ~ 1/14)
-    * Next.js 튜토리얼 클론 코딩(nextjs.org 링크)
+    * Next.js 튜토리얼 클론 코딩 <https://nextjs.org/>
     * Git에 소스코드 관리 
     * 주석을 통해 소스코드 해석 및 학습, README.md 관리 
 ***
 ## -4주차(1/17 ~ 1/23)
-    * Nest.js 튜토리얼 클론 코딩(nestjs.com 링크)
+    * Nest.js 튜토리얼 클론 코딩 <https://nestjs.com/>
     * Git에 소스코드 관리 
     * 주석을 통해 소스코드 해석 및 학습, README.md 관리 
 ***
 ## -5주차(1/24 ~ 1/31)
     * Mongo 서버 및 접속 환경 구축 
-    * Mongoosejs.com 문서 클론 코딩
+    * <https://mongoosejs.com/> 문서 클론 코딩
     * Git에 소스코드 관리
     * 주석을 통해 소스코드 해석 및 학습, README.md 관리 
 *****
