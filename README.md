@@ -16,7 +16,7 @@
     * 주석을 통해 소스코드 해석 및 학습, README.md 관리
 ***
 ## -4주차(1/17 ~ 1/23)
-    * Nest.js 튜토리얼 클론 코딩 Nest[2]   
+    * Nest.js 튜토리얼 클론 코딩 [Nest][2]   
     * Git에 소스코드 관리 
     * 주석을 통해 소스코드 해석 및 학습, README.md 관리 
 ***
@@ -55,6 +55,6 @@
 
 
 
-\[1]: https://nextjs.org/
-\[2]: https://nestjs.com/
-\[3]: https://mongoosejs.com/
+\ [1]: https://nextjs.org/
+\ [2]: https://nestjs.com/
+\ [3]: https://mongoosejs.com/
