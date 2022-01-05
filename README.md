@@ -50,6 +50,9 @@
     - VSC 내에 "Remote - SSH" Extension을 이용   
     Hostname, User, Port 설정   
     접속후 리눅스 터미널창을 통해 접속 확인    
+### 2-2. __로컬서버내에 개인 작업 환경 구축__   
+    - mkdir으로 디렉토리 작성 및 git과 연동   
+    - 작업할 디렉토리에서 'code .' 을 이용하여 VSC 재 실행
 ### 3. abcd
     - 해결
 
