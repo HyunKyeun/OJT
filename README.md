@@ -32,13 +32,13 @@
 # Issue
 1. Git 사용법 숙지 및 사용법
     - git 저장소 생성 및 remote 설정
-        git Bash를 통해 작업 폴더 접근
-        git init // 저장소 생성
-        git remote add origin 'URL'// origin이라는 이름으로 repo주소를 원격 저장소로 저장
-        git remote -v // 저장소 이름 확인 및 URL 확인
-        git fetch // 저장소의 최신 이력 확인 (only)
-        git merge -a // 이력을 토대로 내부에 저장
-        git pull // fetch + merge를 한번에 하는 느낌
+        git Bash를 통해 작업 폴더 접근   
+        git init // 저장소 생성   
+        git remote add origin 'URL'// origin이라는 이름으로 repo주소를 원격 저장소로 저장   
+        git remote -v // 저장소 이름 확인 및 URL 확인   
+        git fetch // 저장소의 최신 이력 확인 (only)   
+        git merge -a // 이력을 토대로 내부에 저장   
+        git pull // fetch + merge를 한번에 하는 느낌   
     - 로컬(개인 저장소) ->원격 (Git 저장소)
 2. abcd
     - 해결
