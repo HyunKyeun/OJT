@@ -53,9 +53,10 @@
 ### 2-2. __로컬서버내에 개인 작업 환경 구축__   
     - mkdir으로 디렉토리 작성 및 git과 연동   
     - 작업할 디렉토리에서 'code .' 을 이용하여 VSC 재 실행
-### 3. abcd
-    - 해결
-
+### 3. 환경설정 구축
+    - VSC(Visual Studio Code)   
+        - Terminal exit code = 0 오류 해결방안으로 node.js 설치   
+    
  [next]: <https://nextjs.org>
  [nest]: <https://nestjs.com>
  [mongo]: <https://mongoosejs.com>
