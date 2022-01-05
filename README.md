@@ -28,16 +28,16 @@
 *****
 # Issue
 ### 1-1. __Git 사용법 숙지 및 사용법__   
-    - __git 저장소 생성 및 remote 설정__    
+    - git 저장소 생성 및 remote 설정    
         git Bash를 통해 작업 폴더 접근   
         git init // 저장소 생성   
         git remote add origin 'URL'// origin이라는 이름으로 repo주소를 원격 저장소로 저장   
         git remote -v // 저장소 이름 확인 및 URL 확인   
-    - __원격(git 저장소) -> 로컬(개인 저장소)__   
+    - 원격(git 저장소) -> 로컬(개인 저장소)   
         git fetch // 저장소의 최신 이력 확인 (only)   
         git merge -a // 이력을 토대로 내부에 저장   
         git pull // fetch + merge를 한번에    
-    - __로컬(개인 저장소) -> 원격(Git 저장소)__   
+    - 로컬(개인 저장소) -> 원격(Git 저장소)   
         git status // untracked 파일 확인   
         git add Filename // track 상태로 만들기
         git commit -m "message" // comment 추가  
