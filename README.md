@@ -11,7 +11,8 @@
     * Git 사용법 및 README.md 수정
 ***
 ## -3주차(1/10 ~ 1/14)
-    * Next.js 튜토리얼 클론 코딩 <https://nextjs.org/>
+    * Next.js 튜토리얼 클론 코딩 [1]   
+    [1] : <https://nextjs.org/>   
     * Git에 소스코드 관리 
     * 주석을 통해 소스코드 해석 및 학습, README.md 관리 
 ***
