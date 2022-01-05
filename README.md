@@ -10,19 +10,19 @@
     * SSH 로컬 서버 접속 환경 ()
     * Git 사용법 및 README.md 수정
 ***
-## -3주차(1/10 ~ 1/14)
-    * Next.js 튜토리얼 클론 코딩 [Next][1]      
+## -3주차(1/10 ~ 1/14) [Next][next]
+    * Next.js 튜토리얼 클론 코딩      
     * Git에 소스코드 관리 
     * 주석을 통해 소스코드 해석 및 학습, README.md 관리
 ***
-## -4주차(1/17 ~ 1/23)
-    * Nest.js 튜토리얼 클론 코딩 [Nest][2]   
+## -4주차(1/17 ~ 1/23) [Nest][nest]
+    * Nest.js 튜토리얼 클론 코딩   
     * Git에 소스코드 관리 
     * 주석을 통해 소스코드 해석 및 학습, README.md 관리 
 ***
-## -5주차(1/24 ~ 1/31)
+## -5주차(1/24 ~ 1/31)[Mongo][mongo]
     * Mongo 서버 및 접속 환경 구축 
-    * [Mongo][3] 문서 클론 코딩
+    * Mongo 문서 클론 코딩
     * Git에 소스코드 관리
     * 주석을 통해 소스코드 해석 및 학습, README.md 관리 
 *****
@@ -53,6 +53,6 @@
 ### 3. abcd
     - 해결
 
- [1]: https://nextjs.org
- [2]: https://nestjs.com
- [3]: https://mongoosejs.com
+ [next]: <https://nextjs.org>
+ [nest]: <https://nestjs.com>
+ [mongo]: <https://mongoosejs.com>
