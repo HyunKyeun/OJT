@@ -75,4 +75,8 @@
         }
         />
     ```
+## 5. Layout Component
 
+## 6. CSS Component
+
+## 7. Global CSS
