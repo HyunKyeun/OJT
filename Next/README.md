@@ -67,6 +67,7 @@
         strategy : 외부 스크립트 실행될 시간 조절
         onLoad : 스크립트 실행후 행동
         */
+        import Script from 'next/script'
         <Script
         src="URL"
         strategy=" "
