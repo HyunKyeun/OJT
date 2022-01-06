@@ -60,7 +60,7 @@
     - Next.js 환경 구축   
         - 로컬 서버 개인 작업 환경 Next 디렉토리 이용  
         - npx create-next-app으로 개발환경 세팅   
-        - package.json "Scripts" 요소를 수정하여 port 10000 및 npm run 100000으로 시작   
+        - package.json Scripts를 수정하여 port 3000 -> 10000 및 npm run 10000으로 시작   
     - Nest.js 환경 구축   
         - 로컬 서버 개인 작업 환경 Nest 디렉토리 이용
         - sudo npm i -g @nestjs/cli  설치   
