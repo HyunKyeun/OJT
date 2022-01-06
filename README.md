@@ -65,7 +65,7 @@
         - 로컬 서버 개인 작업 환경 Nest 디렉토리 이용
         - sudo npm i -g @nestjs/cli  설치   
         - nest new nest-test 프로젝트 생성   
-        - src/main.ts의 bootstrap port 3000 -> 10001로 수정   
+        - src/main.ts의 bootstrap port 3000 -> 10001로 수정 및 package.json 수정 npm run 10001으로 실행  
  [next]: <https://nextjs.org>
  [nest]: <https://nestjs.com>
  [mongo]: <https://mongoosejs.com>
