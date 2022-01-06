@@ -51,12 +51,21 @@
     Hostname, User, Port 설정   
     접속후 리눅스 터미널창을 통해 접속 확인    
 ### 2-2. __로컬서버내에 개인 작업 환경 구축__   
-    - mkdir으로 디렉토리 작성 및 git과 연동   
-    - 작업할 디렉토리에서 'code .' 을 이용하여 VSC 재 실행
+    - mkdir으로 디렉토리 작성 및 git과 연동 (~/NHK/OJT)  
+    - 연습용 디렉토리 Next, Nest, Mongo 생성
 ### 3. 환경설정 구축
     - VSC(Visual Studio Code)   
-        - Terminal exit code = 0 오류 해결방안으로 node.js 설치   
-    
+        - Terminal exit code = 0 오류 해결방안으로 node.js 설치
+        - Extension "Remote - SSH", "GitHub Repositories" 설치   
+    - Next.js 환경 구축   
+        - 로컬 서버 개인 작업 환경 Next 디렉토리 이용  
+        - npx create-next-app으로 개발환경 세팅   
+        - package.json "Scripts" 요소를 수정하여 port 10000 및 npm run 100000으로 시작   
+    - Nest.js 환경 구축   
+        - 로컬 서버 개인 작업 환경 Nest 디렉토리 이용
+        - sudo npm i -g @nestjs/cli  설치   
+        - nest new nest-test 프로젝트 생성   
+        - src/main.ts의 bootstrap port 3000 -> 10001로 수정   
  [next]: <https://nextjs.org>
  [nest]: <https://nestjs.com>
  [mongo]: <https://mongoosejs.com>
