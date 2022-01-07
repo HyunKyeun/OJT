@@ -26,7 +26,7 @@
         ```
     - 함수형태로 만들고, return 해주기
     - scripte type <span style="color:lightgreen">"text/babel"</span> 설정 
-    -  HTML형태 쓸때 \<div> Babel 형태 \<Title> 대문자 이용
+    -  HTML형태 쓸때 \<<span style="color:orange">Title</span>> 대문자 이용
 
       
 ## 3. test3
