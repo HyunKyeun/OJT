@@ -8,11 +8,13 @@
 <script>
     let counter = 0;
     const button = document.getElementById("btn");
+    // span의 문장 Total clicks : 0 선택
     const span = document.querySelector("span");
     function handclick(){
         counter = counter + 1;
         span.innerText = `Total clicks: ${counter}`;
     }
+    //click 시 handclick() 실행. () 안적는 이유는 버튼이 눌릴때만 실핼하게
     button.addEventListener("click",handclick);
 </script>
 </html>
