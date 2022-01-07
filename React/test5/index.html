@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<body>
+    <div id="root"></div>
+</body>
+<script src="https://unpkg.com/react@17.0.2/umd/react.production.min.js"></script>
+<script src="https://unpkg.com/react-dom@17.0.2/umd/react-dom.production.min.js"></script>
+<script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+<script type="text/babel">
+    const root = document.getElementById("root");
+    function App() {
+        const [Amount, setAmount] = React.useState();
+        const [flipped, setFlipped] = React.useState(false);
+        const onChange = (event) =>{
+            setAmount(event.target.value); 
+        };
+        const reset = () => setAmount(0);
+        const onFlip = () => setFlipped((current) => !current);
+        return(     
+        <div>
+        <h1 className="hi"> Super Converter</h1>
+        <lavel htmlfor="minutes">Minutes</lavel>
+        <input value={flipped ? Amount * 60 : Amount} id="minutes" placeholder="Minutes" type="number" onChange={onChange} disabled={flipped === true}/>
+        <h4>You want to convert {Amount}</h4>
+        <lavel htmlfor="hours">Hours</lavel>
+        <input value={flipped ? Amount : Math.round(Amount/60)} id="hours" placeholder="Hours" type="number" onChange={onChange} disabled={flipped === false}/>
+        <button onClick={reset}>Reset</button>
+        <button onClick={onFlip}>Flip</button>
+        
+        </div>
+        );
+    }
+        ReactDOM.render(<App/>, root);
+</script>
+</html>
