@@ -16,11 +16,16 @@
     - scrpit 로 react, react-dom, babel 불러오기
      
         ```js
-        const Title = () => { return(
-        <h3 id="title" onMouseEnter={() => console.log("Mouse enter")}> Hello 
+        const Title = () => { 
+            return(
+        <h3 
+        id="title" 
+        onMouseEnter={() => 
+        console.log("Mouse enter")}> Hello 
         </h3>)};
         ```
     - 함수형태로 만들고, return 해주기
+    - scripte type <span style="color:lightgreen">"text/babel"</span> 설정 
     -  HTML형태 쓸때 \<div> Babel 형태 \<Title> 대문자 이용
 
       
@@ -29,52 +34,29 @@
     ```js
      ReactDOM.render(<Container/>, root);
     ```
-    - 변화되는 부분 바로 뒤 코드에 넣어서 갱신 가능. 
+    - 변화되는 부분 바로 뒤 코드에 넣어서 갱신 가능.
+    - 간단한 예제에서는 괜찮으나 갱신이 필요할때마다 render는 not good
 
 ## 4. test4 
-- public 디렉토리에 파일을 추가하여 src로 이용 가능   
-
-- 기존 이미지 업로드 방법
+- useState를 이용하여 [Counter, setCounter] 이용 하여 갱신
+    ```js
+    // 클릭시 setCounter를 호출, counter를 +1
+    const [counter, setCounter] = React.useState(0);
+        const onClick = () => {
+            setCounter(counter + 1);
+        };
+    ```
+    - render를 초기에 한번 실행 그후는 변하는값만 수정
+## 5. test5
+- useState를 여러개 사용하여 min <-> hour 바꾸기
+- event.target.value 입력한 숫자만 출력하기
+- flip 상태에 따라 3항 연산자를 통해 입력, 출력 형태 바꾸기
     ```html
-    <!-- pic.jpg 위치, 이미지가 없을때 제공할 이름 "alter pic" -->
-    <img src="/images/pic.jpg alt="alter pic">
-    <!-- height,width을 기본적으로 적지 않으면 기본 사이즈를 따라간다 -->
-    ```
-- Image Component 형태
-    ```js
-    import Image from 'next/image'
-    <!-- height,width 기본 옵션 -->
-    const Component = () => (
-        <Image
-        src="/image/pic.jpg"
-        height={100}
-        width={100}
-        alt="alter name"
-        />
-    )
-    ```
-## 4. Third-Party JavaScript(script)
-##### next.js app 안에 만들어진 내부 파일이 아닌 외부 src를 이용할 때
-- 기존 script 
-    ```js
-    <script src="URL" />
-    ```
-- Script Component
-    ```js
-        /* 
-        strategy : 외부 스크립트 실행될 시간 조절
-        onLoad : 스크립트 실행후 행동
-        */
-        import Script from 'next/script'
-        <Script
-        src="URL"
-        strategy=" "
-        onLoad= {() => ~~~
-        }
+    <input value={
+        flipped ? Amount * 60 : Amount} id="minutes" 
+        placeholder="Minutes" 
+        type="number" 
+        onChange={onChange} 
+        disabled={flipped === true}
         />
     ```
-## 5. Layout Component
-
-## 6. CSS Component
-
-## 7. Global CSS
