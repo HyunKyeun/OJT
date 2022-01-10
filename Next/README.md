@@ -25,7 +25,13 @@
 - class name으로 생성시 랜덤한 id 부여, 여러 곳에서 하나의 컴포넌트를 충돌없이 사용 가능
 - 여러 스타일을 한번에 쓸때
     1. \` \${} \${} \`
-    2. [~,~].join[""]으로 한문장에 넣기 
+    2. [~,~].join[""]으로 한문장에 넣기
+## 5. styles JSX
+- style jsx {" "} 필요한 요소들만 컴포넌트 안에서만 사용하기
+## 6. global css 적용
+- _app.js (*모든 페이지 랜더링전에 _app.js를 확인)
+- 각페이지를 컴포넌트로 불러온 후 return _app에 추가적으로 적은 코드를 랜더링하여 최종 HTML 생성
+- style jsx global을 이용
 ---------
 ## 0. Next.js
 - Next Routing system
