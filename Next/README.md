@@ -6,7 +6,7 @@
     * 주석을 통해 소스코드 해석 및 학습, README.md 관리
 *****
 # What I did and learn
-# 노마드 Next 영상
+## 노마드 Next 영상
 
 ## 1. Basic
 - 다른 페이지 생성시 export default function ---- 안적으면 errorcode
@@ -25,7 +25,7 @@
 - class name으로 생성시 랜덤한 id 부여, 여러 곳에서 하나의 컴포넌트를 충돌없이 사용 가능
 - 여러 스타일을 한번에 쓸때
     1. \` \${} \${} \`
-    2. [~,~].join[""]으로 한문장에 넣기
+    2. [\~,\~].join[""]으로 한문장에 넣기
 ## 5. styles JSX
 - style jsx {" "} 필요한 요소들만 컴포넌트 안에서만 사용하기
 ## 6. global css 적용
