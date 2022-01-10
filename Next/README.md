@@ -32,6 +32,12 @@
 - _app.js (*모든 페이지 랜더링전에 _app.js를 확인)
 - 각페이지를 컴포넌트로 불러온 후 return _app에 추가적으로 적은 코드를 랜더링하여 최종 HTML 생성
 - style jsx global을 이용
+## 7. next.config.js 수정 
+- redirect / 원하는 주소로 보내줄때 old/:path* -> new/:path*
+- rewrite api 같은 공개를 원치 않는 정보등을 숨길때 실제 주소를 숨기는 방법 Source 주소만 공개 
+## 8. ServerSideRendering
+- 기본적으로 CSR이지만, SSR을 원한다면 function name getServerSideProps 이용
+- URL 사용시 프론트 URL이 아닌, 서버측 URL을 전부 적어야한다
 ---------
 ## 0. Next.js
 - Next Routing system

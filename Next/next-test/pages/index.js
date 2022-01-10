@@ -1,17 +1,26 @@
-import Navbar from "../components/NavBar";
+import { useEffect, useState } from "react";
+import Seo from "../components/Seo";
 
-
-export default function Home3() {
+export default function Home() {
+  const [movies, setMovies] = useState();
+  useEffect(() => {
+    (async () => {
+      const { results } = await (await fetch(`/api/movies`)).json();
+      setMovies(results);
+    })();
+  }, []);
   return (
     <div>
-      
-      <h1>Hello</h1>
-      
+      <Seo title="Home" />
+      {!movies && <h4>Loading...</h4>}
+      {movies?.map((movie) => (
+        <div key={movie.id}>
+          <h4>{movie.original_title}</h4>
+        </div>
+      ))}
     </div>
-  )
+  );
 }
-
-
 
 // export default function Home2() {
 //   const [counter, setCounter] = useState(0);
