@@ -1,0 +1,16 @@
+.nav {
+    display: flex;
+    justify-content: space-between;
+    background-color: tomato;
+}
+
+.active{
+    color : tomato;
+}
+
+.inactive{
+    color : violet;
+}
+.link {
+    text-decoration : underline;
+}
