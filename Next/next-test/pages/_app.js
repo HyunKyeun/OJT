@@ -1,7 +1,17 @@
-import '../styles/globals.css'
+import Navbar from "../components/NavBar";
+import "../styles/globals.css";
 
-function MyApp({ Component, pageProps }) {
-  return <Component {...pageProps} />
+export default function myApp({Component, pageProps}){
+  return ( 
+      <>
+      <Navbar />
+      <Component {...pageProps} />;
+      <style jsx global>{`
+      a {
+        color : white;
+      }
+      `}</style>
+    </>
+    
+  );
 }
-
-export default MyApp

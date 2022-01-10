@@ -1,20 +1,37 @@
-import Head from 'next/head'
-import Layout, { siteTitle } from '../components/layout'
-import utilStyles from '../styles/utils.module.css'
+import Navbar from "../components/NavBar";
 
-export default function Home() {
+
+export default function Home3() {
   return (
-    <Layout home>
-      <Head>
-        <title>{siteTitle}</title>
-      </Head>
-      <section className={utilStyles.headingMd}>
-        <p>This is just test page</p>
-        <p>
-          (This is a sample website - you’ll be building a site like this on{' '}
-          <a href="https://nextjs.org/learn">our Next.js tutorial</a>.)
-        </p>
-      </section>
-    </Layout>
+    <div>
+      
+      <h1>Hello</h1>
+      
+    </div>
   )
 }
+
+
+
+// export default function Home2() {
+//   const [counter, setCounter] = useState(0);
+//   return (
+//     <div>
+//       <h1>Hello {counter}</h1>
+//       <button onClick={() => setCounter((prev) => prev + 2)}>+</button>
+//       <button onClick={() => setCounter(0)}>reset</button>
+//     </div>
+//   )
+// }
+
+// import Navbar from "../components/NavBar";
+
+
+// export default function Home3() {
+//   return (
+//     <div>
+//       <Navbar />
+//       <h1>Hello</h1>
+//     </div>
+//   )
+// }
