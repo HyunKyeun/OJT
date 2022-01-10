@@ -63,3 +63,12 @@
 ## 6. test6
 - Km <-> Miles 추가 
 - Select + value 를 이용하여 원하는 Component만 출력
+## 7. props 설정
+- 부모 컴포넌트에사의 임의의 속성을 자식 컴포넌트에 부여 가능 
+## 8. props 추가 설명
+- props에 올라가는 속성이 onclick 이여도 버튼 리스너는 아니다. 쓰려면 자식 컴포넌트에 선언
+- props change 원하는거만 render 가능 (React.memo)
+## 9. Prop types
+- script react.production -> react.development로 수정 
+- proptypes를 이용하여 prop의 타입을 확인 가능 및 에러 출력 가능
+- isRequired로 필수 요소 확인 가능
