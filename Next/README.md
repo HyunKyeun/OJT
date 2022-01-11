@@ -38,6 +38,14 @@
 ## 8. ServerSideRendering
 - 기본적으로 CSR이지만, SSR을 원한다면 function name getServerSideProps 이용
 - URL 사용시 프론트 URL이 아닌, 서버측 URL을 전부 적어야한다
+## 9.Navigating
+- Link 다른 페이지로 이동
+- onClick router.push로 페이지 전환시 보낼 정보들
+- props에 원하는 내용 넣기, 다른곳에서 꺼내기
+
+* * *
+#### 세부적인 내용은 각 js 파일 내부에
+
 ---------
 ## 0. Next.js
 - Next Routing system
