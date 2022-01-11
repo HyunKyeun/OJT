@@ -1,6 +1,8 @@
 {
   "name": "next-test",
   "private": true,
+
+
   "scripts": {
     "10000": "next dev -p 10000",
     "build": "next build",

@@ -8,8 +8,12 @@ export default function Navbar(){
       <nav>
         <img src="/vercel.svg" />
         <div>
+          {/* 링크들위치 및 pathname 저장 + 현재페이지일 경우 active로 색 변화 */}
           <Link href="/">
             <a className={router.pathname === "/" ? "active" : ""}>Home</a>
+          </Link>
+          <Link href="/hello">
+            <a className={router.pathname === "/hello" ? "active" : ""}>Movie</a>
           </Link>
           <Link href="/posts/test/1">
             <a className={router.pathname === "/posts/test/1" ? "active" : ""}>About</a>
