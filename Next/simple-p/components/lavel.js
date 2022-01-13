@@ -1,9 +1,9 @@
-export default function Lavel({htmlfor,post}) {
+export default function Lavel({hf,post}) {
     return (
         <div>
         
                 <lavel
-                  htmlfor = {htmlfor}>
+                  htmlFor = {hf}>
                   {post}
                 </lavel>
         <style jsx>{`

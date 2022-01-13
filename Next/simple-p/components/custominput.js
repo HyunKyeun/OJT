@@ -1,11 +1,11 @@
-export default function Custombtn({type,post}) {
+export default function Custominput({type,post}) {
     return (
         <>
-        <button type={type} className="custombtn">
+        <input type={type} className="custominput">
             {post}
-        </button>
+        </input>
         <style jsx>{`
-        .custombtn{
+        .custominput{
             height : 40px;
             margin-right : 8px;
             padding : 0 16px;
@@ -15,7 +15,7 @@ export default function Custombtn({type,post}) {
             box-shadow : 0px 1px 2px rgba(0, 0, 0, 0.6);
             cursor : pointer;
         }
-        .custombtn:hover{
+        .custominput:hover{
             background-color : rgba(169,210,200,0.9);
             box-shadow : 0px 2px 8px rgba(0, 0, 0, 0.6);
         }

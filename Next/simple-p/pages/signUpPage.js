@@ -2,38 +2,50 @@ import Inputs from "../components/Input";
 import Lavel from "../components/lavel";
 import Link from "next/link";
 import Custombtn from "../components/custombtn";
+import React, { useState } from "react";
+import { useRouter } from "next/router";
+
 
 
 export default function signUpPage() {
+    
+    const [changedEmail,setchangeEmail] = useState("");
+    const [changedName,setchangeName] = useState("");
+    const [changedUserid,setchangeUserid] = useState("");
+    const [changedUserpw,setchangeUserpw] = useState("");
+    const router = useRouter();
 
+    const onClick = (email,username,userid,userpw) => {
+        router.push(`/signedup/${email},${username},${userid},${userpw}`)
+    }
     return (
-        <sign>
+        <sig>
              <div className="input">
-                <Lavel htmlfor="emails" post = "- E-Mail"/> 
-                <Inputs id = "email" placeholder="E-Mail" type="email"/>
+                <Lavel hf="emails"  post = "- E-Mail"/> 
+                <Inputs id = "email" placeholder="E-Mail" type="email" onChange={e => setchangeEmail(e.target.value)}/>
+             </div>
+            <div className="input">
+                <Lavel hf="name" post = "- 이름"/>
+                <Inputs id="name" placeholder="이름" onChange={e => setchangeName(e.target.value)}/>
             </div>
             <div className="input">
-                <Lavel htmlfor="name" post = "- 이름"/>
-                <Inputs id="name" placeholder="이름" />
+                <Lavel hf="userid" post = "- ID"/>
+                <Inputs id="userid" placeholder="아이디" onChange={e => setchangeUserid(e.target.value)}/>
             </div>
             <div className="input">
-                <Lavel htmlfor="userid" post = "- ID"/>
-                <Inputs id="userid" placeholder="아이디" />
-            </div>
-            <div className="input">
-                <Lavel htmlfor="userpw" post = "- PW"/>
-                <Inputs id="userpw" placeholder="패스워드" type="password" />
+                <Lavel hf="userpw" post = "- PW"/>
+                <Inputs id="userpw" placeholder="패스워드" type="password" onChange={e => setchangeUserpw(e.target.value)}/>
             </div>
             <div className="btn">
-                <Link href="/signedUp">
+                <div onClick={() => onClick(changedEmail,changedName,changedUserid,changedUserpw)}>
                     <a><Custombtn post="Sign Up"/></a>
-                </Link>
+                    </div>
                 <Link href="/">
-                    <a><Custombtn post="뒤로가기"/></a>
+                    <a><Custombtn post="메인으로"/></a>
                 </Link>
             </div>
         <style jsx>{`
-        sign {
+        sig {
             display : flex;
             width : 100%;
             flex-direction : column;
@@ -52,7 +64,8 @@ export default function signUpPage() {
              justify-content : center;
         }
         `}</style>
-        </sign>
+        </sig>
         
     );
+    
 }

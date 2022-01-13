@@ -1,14 +1,19 @@
 import Link from "next/link"
+import { useReducer } from "react";
 import Custombtn from "./custombtn";
 
 export default function Logo(){
+
     return(
         <logo>
-            
+
+
         <div>
+            
             <Link href="/">
                 <a className="logos"><img src="/vercel.svg" /></a>
             </Link>
+            {/* {!user.isLogged &&( */}
             <btn>
                 <Link href="/signUpPage">
                 <a><Custombtn post="회원가입"/></a>
@@ -17,6 +22,15 @@ export default function Logo(){
                 <a><Custombtn post="로그인"/></a>
                 </Link>
             </btn>
+            {/* )} */}
+            {/* {user.isLogged &&(
+                <btn>
+                <a>안녕</a>
+                <Link href="/LoginPage">
+                <a><Custombtn post="로그아웃"/></a>
+                </Link>
+            </btn>
+            )} */}
         </div>
         
         <style jsx>{`

@@ -2,19 +2,20 @@ import Inputs from "../components/Input";
 import Lavel from "../components/lavel";
 import Link from "next/link";
 import Custombtn from "../components/custombtn";
+import { useRouter } from "next/router";
+import { useState } from "react";
 
 export default function LoginPage() {
-    const alerting = () =>{
-        return alert("Sry! I didnt make it yet");
-    };
+    const [changedUserid,setchangeUserid] = useState();
+    const [changedUserpw,setchangeUserpw] = useState();
     return (
-        <sign>
+        <sig>
             <div className="input">
-                <Lavel htmlfor="userid" post = "- ID"/>
+                <Lavel hf="userid" post = "- ID"/>
                 <Inputs id="userid" placeholder="아이디" />
             </div>
             <div className="input">
-                <Lavel htmlfor="userpw" post = "- PW"/>
+                <Lavel hf="userpw" post = "- PW"/>
                 <Inputs id="userpw" placeholder="패스워드" type="password" />
             </div>
             <div className="btn">
@@ -30,14 +31,11 @@ export default function LoginPage() {
                 <a>만든다 너는 없으면 아이디</a>
                 </Link>
             </div>
-            <div className="btn">
-            <Link href=" " >
-            {/* onClick={() => alerting}> */}
-                <a>찾는다 너는 까먹으면 아이디</a>
-                </Link>
-            </div>
+            {/* <div className="btn">
+                <a>찾는다 너는 까먹은 아이디</a>
+            </div> */}
         <style jsx>{`
-        sign {
+        sig {
             display : flex;
             width : 100%;
             flex-direction : column;
@@ -72,7 +70,7 @@ export default function LoginPage() {
             font-size : 13px;
         }
         `}</style>
-        </sign>
+        </sig>
         
     );
 }
