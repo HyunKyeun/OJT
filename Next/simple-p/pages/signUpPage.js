@@ -17,7 +17,7 @@ export default function signUpPage() {
 
     const onClick = (email,username,userid,userpw) => {
         router.push(`/signedup/${email},${username},${userid},${userpw}`)
-    }
+    };
     return (
         <sig>
              <div className="input">
@@ -49,8 +49,6 @@ export default function signUpPage() {
             display : flex;
             width : 100%;
             flex-direction : column;
-            padding : 10 0 10 0  ;
-                     
           }
 
         .input{

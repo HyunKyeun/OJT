@@ -1,11 +1,16 @@
 import Link from "next/link";
-import Custombtn from "../components/custombtn";
+import { useRouter } from "next/router";
+import Custombtn from "../../components/custombtn";
 
-export default function LoggedinPage() {
+export default function LoggedinPage({params}) {
+    const router = useRouter
+    console.log(params)
+   const[userid] = params;
+    
     return (
     <>
         <div>
-            <h3>you logged in!</h3>
+            <h3>{userid}님 logged in!</h3>
         </div>
         <div>
             <Link href="/">
@@ -22,4 +27,11 @@ export default function LoggedinPage() {
     `}</style>
     </>
     );
+}
+
+export function getServerSideProps({params:{params}}) {
+    return{props: {
+        params,
+    },
+};
 }

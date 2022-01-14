@@ -7,10 +7,14 @@ module.exports = {
   // async rewrites() {
   //   return[
   //     {
-  //       source: "/signedup/result",
-  //       destination: "/signedup/path:*",
+  //       source : "/signedup/:path*",
+  //       destination : "/signedup/result",
+  //     },
+  //     {
+  //       source : "/loggedin/:path*",
+  //       destination : "/loggedin/result",
   //     }
   //   ];
   // },
-};
+}
 

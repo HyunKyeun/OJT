@@ -4,10 +4,8 @@ import React from "react";
 import { useRouter } from "next/router";
 
 export default function SignedUpPage({params}) {
-    console.log({params});
     const router = useRouter();
     var temp = params[0];
-    console.log(temp);
     const [email, username, userid, userpw] = temp.split(",");    
     
     return (
