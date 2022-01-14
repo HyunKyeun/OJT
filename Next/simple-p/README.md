@@ -23,10 +23,12 @@
     - 로그인 값 useState로 받아오기
     - 조건문으로 다를시 toast
     - 성공시 임의의 페이지 이동
-
+- 기타 
+    - .env 파일 git 무시
 ---
 ## 추가할 기능
-- next.config.js내에 rewrites 기능
+- next.config.js내에 rewrites 기능 (URL에 넘겨지는 정보 제한하기)
+- pw on/off 보이기
 - 로그인 및 회원 가입 input에 조건 걸기 ( 특수 문자 or split, 주소 문자 등등)
 - Nest, MongoDB
 - more awesome thing
