@@ -126,6 +126,17 @@
         </Layout>
         )
     ```
-## 6.
+## 6. static vs serverside
+- getstaticprops
+    - 빌드시 딱 한번만 호출 될 내용 (수정 불가)
+    - 호출시 data fetch를 하지 않는다
+- getserversideprops
+    - page가 요청 받을때마다 pre-render
+    - 매 요청마다 호출되어 static보다는 느림
+    - 호출마다 동적 데이터를 수정
 
-## 7.
+## 7. DynamicRoute
+- 동적 경로 파일을 만들어 해당하는 페이지를 생성 및 해당 Data 출력
+    ```js
+    ../posts/[...id]
+    ```
