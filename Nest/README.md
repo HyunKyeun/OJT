@@ -27,22 +27,18 @@
     - URL로 넘어온 데이터 -> DTO form을 거치고 -> 넘어간다
     - 서버 실시간 확인 및, 유효성 검사 
 - Pipe
-    ```js
     app.useGlobalPipes(
     new ValidationPipe({
-      whitelist : true,
-      forbidNonWhitelisted : true,
-      transform : true,
+    whitelist : true,
+    forbidNonWhitelisted : true,
+    transform : true,
     })
-  );
-  ```
+    );
   - whitelist : entity에 선언된 변수 사용시에만 request
   - forbidNonWhitelisted : entity에 선언되지 않은 변수 사용시 bad request 
   - transform : 유저들의 post를 실제 타입으로 변환
     - transform을 지우고 /1 실행시 string (url에서 넘어오는건 string)
     - transform 사용시 /1 -> number (선언한 타입으로 자동 변환)
 - string to number
-    ``` js
-        (movie => movie.id === +id)
-    ```
+    (movie => movie.id === +id)
     - +를 붙이면 string을 number타입으로 변환
