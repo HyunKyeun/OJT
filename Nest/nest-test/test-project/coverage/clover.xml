@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1642730640147" clover="3.2.0">
-  <project timestamp="1642730640147" name="All files">
-    <metrics statements="60" coveredstatements="9" conditionals="1" coveredconditionals="1" methods="16" coveredmethods="5" elements="77" coveredelements="15" complexity="0" loc="60" ncloc="60" packages="4" files="9" classes="9"/>
+<coverage generated="1642734665457" clover="3.2.0">
+  <project timestamp="1642734665457" name="All files">
+    <metrics statements="60" coveredstatements="14" conditionals="1" coveredconditionals="1" methods="16" coveredmethods="8" elements="77" coveredelements="23" complexity="0" loc="60" ncloc="60" packages="4" files="9" classes="9"/>
     <package name="src">
       <metrics statements="15" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="0"/>
       <file name="app.controller.ts" path="/home/dev/NHK/OJT/Nest/nest-test/test-project/src/app.controller.ts">
@@ -47,7 +47,7 @@
       </file>
     </package>
     <package name="src.movies">
-      <metrics statements="36" coveredstatements="9" conditionals="1" coveredconditionals="1" methods="14" coveredmethods="5"/>
+      <metrics statements="36" coveredstatements="14" conditionals="1" coveredconditionals="1" methods="14" coveredmethods="8"/>
       <file name="movies.controller.ts" path="/home/dev/NHK/OJT/Nest/nest-test/test-project/src/movies/movies.controller.ts">
         <metrics statements="18" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="6" coveredmethods="0"/>
         <line num="1" count="0" type="stmt"/>
@@ -77,21 +77,21 @@
         <line num="10" count="0" type="stmt"/>
       </file>
       <file name="movies.service.ts" path="/home/dev/NHK/OJT/Nest/nest-test/test-project/src/movies/movies.service.ts">
-        <metrics statements="14" coveredstatements="9" conditionals="1" coveredconditionals="1" methods="8" coveredmethods="5"/>
+        <metrics statements="14" coveredstatements="14" conditionals="1" coveredconditionals="1" methods="8" coveredmethods="8"/>
         <line num="1" count="1" type="stmt"/>
         <line num="7" count="1" type="stmt"/>
-        <line num="8" count="4" type="stmt"/>
-        <line num="11" count="1" type="stmt"/>
-        <line num="15" count="2" type="stmt"/>
-        <line num="16" count="2" type="cond" truecount="1" falsecount="0"/>
-        <line num="17" count="1" type="stmt"/>
-        <line num="19" count="1" type="stmt"/>
-        <line num="23" count="0" type="stmt"/>
-        <line num="24" count="0" type="stmt"/>
-        <line num="28" count="1" type="stmt"/>
-        <line num="35" count="0" type="stmt"/>
-        <line num="36" count="0" type="stmt"/>
-        <line num="37" count="0" type="stmt"/>
+        <line num="8" count="8" type="stmt"/>
+        <line num="11" count="5" type="stmt"/>
+        <line num="15" count="7" type="stmt"/>
+        <line num="16" count="7" type="cond" truecount="1" falsecount="0"/>
+        <line num="17" count="2" type="stmt"/>
+        <line num="19" count="5" type="stmt"/>
+        <line num="23" count="3" type="stmt"/>
+        <line num="24" count="2" type="stmt"/>
+        <line num="28" count="4" type="stmt"/>
+        <line num="35" count="1" type="stmt"/>
+        <line num="36" count="1" type="stmt"/>
+        <line num="37" count="1" type="stmt"/>
       </file>
     </package>
     <package name="src.movies.entities">
