@@ -1,1 +1,0 @@
-# Clone Coding of NextJS Course Nomadcoder 
