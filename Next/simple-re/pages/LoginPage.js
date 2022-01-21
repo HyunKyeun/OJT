@@ -4,7 +4,7 @@ import Link from "next/link";
 import Custombtn from "../components/custombtn";
 import { useRouter } from "next/router";
 import { useState } from "react";
-import { toast,  ToastContainer } from "react-nextjs-toast"
+
 
 export default function LoginPage() {
     const TempID = process.env.NEXT_PUBLIC_TEMP_ID;
@@ -15,12 +15,16 @@ export default function LoginPage() {
     const [changedUserid,setchangeUserid] = useState("");
     const [changedUserpw,setchangeUserpw] = useState("");
 
+    // const onClick = (userid) => {
+    //     ((TempID === changedUserid) && (TempPW === changedUserpw)) ? router.push(`loggedin/${userid}`) : toast.notify("You put wrong")
+    // };
+
     const onClick = (userid) => {
-        ((TempID === changedUserid) && (TempPW === changedUserpw)) ? router.push(`loggedin/${userid}`) : toast.notify("You put wrong")
+        ((TempID === changedUserid) && (TempPW === changedUserpw)) ? router.push(`loggedin/${userid}`) : router.push(`/`)
     };
-    const onClickToast =() => {
-        toast.notify("I didnt make it yet");
-    };
+    // const onClickToast =() => {
+    //     toast.notify("I didnt make it yet");
+    // };
     return (
         <sig>
             <div className="input">
@@ -31,7 +35,7 @@ export default function LoginPage() {
                 <Lavel hf="userpw" post = "- PW"/>
                 <Inputs id="userpw" placeholder="패스워드" type="password" onChange={e => setchangeUserpw(e.target.value)}/>
             </div>
-            <ToastContainer />
+            {/* <ToastContainer /> */}
             <div className="btn">
                 <div onClick={() => onClick(changedUserid)} >
                     <a><Custombtn post="Login"/></a>

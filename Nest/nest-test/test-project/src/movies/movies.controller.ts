@@ -1,4 +1,4 @@
-import { Body, Controller, Delete, Get, Param, Patch, Post, Query } from '@nestjs/common';
+import { Body, Controller, Delete, Get, Param, Patch, Post, Query, Res } from '@nestjs/common';
 import { CreateMovieDTO } from 'src/dto/create-movie.dto';
 import { UpdateMovieDTO } from 'src/dto/update-movie.dto';
 import { Movie } from './entities/movie.entity';

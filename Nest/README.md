@@ -3,7 +3,7 @@
 - Nomad nest api 클론 코딩
 - 시작시 npm run 10001 (포트 10001 수정 및 package.json 수정)
 - dev시 npm run start:dev로 실시간 수정사항 확인 가능
--
+-npm run test:watch로 spec test 가능
 ```
     npm i class-validator 
     npm i class-transformer
@@ -22,7 +22,7 @@
 - Service
     - 각 business function 정의(무엇을 리턴 할 것인가)
     - controller의 명령어와 function 이름이 같을 필요는 없다.
-- Data Transfer Object(dto)
+    - 
     - 계층 간 데이터 교환용 객체...
     - URL로 넘어온 데이터 -> DTO form을 거치고 -> 넘어간다
     - 서버 실시간 확인 및, 유효성 검사 
@@ -42,3 +42,13 @@
 - string to number
     (movie => movie.id === +id)
     - +를 붙이면 string을 number타입으로 변환
+---
+Testing 
+- 직접 눈으로 service의 기능들이 잘 작동하는지, 어떤값을 return하는지 알수 없다.
+- 그때 사용하는것이 jest의 테스트 기능
+-npm run test:watch후에 spec.ts 파일을 통해 각각의 기능들을 테스트 해볼수 있다.
+    - ex) getOne 테스트시
+      expect(movie.title).toEqual("TEst")
+      생성된 movie 배열의 타이틀이 TEst면 ok or Fail 등등등... 
+- npm run test:cov로 확인된 기능, 퍼센티지 등등.. 확인가능
+ 
