@@ -33,13 +33,15 @@
   - URL로 넘어온 데이터 -> DTO form을 거치고 -> 넘어간다
   - 서버 실시간 확인 및, 유효성 검사
 - Pipe
-  app.useGlobalPipes(
-  new ValidationPipe({
-  whitelist : true,
-  forbidNonWhitelisted : true,
-  transform : true,
-  })
-  );
+  ```
+    app.useGlobalPipes(
+    new ValidationPipe({
+    whitelist : true,
+    forbidNonWhitelisted : true,
+    transform : true,
+    })
+    );
+  ```
   - whitelist : entity에 선언된 변수 사용시에만 request
   - forbidNonWhitelisted : entity에 선언되지 않은 변수 사용시 bad request
   - transform : 유저들의 post를 실제 타입으로 변환

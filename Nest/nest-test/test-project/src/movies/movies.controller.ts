@@ -1,5 +1,6 @@
 import {
   Body,
+  ConsoleLogger,
   Controller,
   Delete,
   Get,
@@ -25,12 +26,12 @@ export class MoviesController {
 
   @Get(':id')
   getOne(@Param('id') movieID: number): Movie {
-    console.log(typeof movieID);
     return this.movieService.getOne(movieID);
   }
 
   @Post()
   create(@Body() movieData: CreateMovieDTO) {
+    console.log('test');
     return this.movieService.create(movieData);
   }
 

@@ -1,54 +1,22 @@
+import axios from "axios";
 
-import styles from '../styles/Home.module.css'
-export default function Home() {
-  return (
-    <h1>This should be main </h1>
-  );
-} 
+export default function Home(props) {
+  const userinfo = props.item;
 
-// export default function Home() {
-//   return ( 
-//     <>
-//     <div>
-//     Welcome
-//     </div>
-//     <div>
-//       here should be ID
-//     </div>
-//     <div>
-//     Here shoud be ID box
-//     </div>
-//     <div>
-//       here should be PW
-//     </div>
-//     <div>
-//       here should be PW box
-//     </div>
-//     <div>
-//       here should be Login box
-//     </div>
-//     {/* <div>
-//       <btn>btn1</btn>
-//       <space></space>
-//       <btn>btn2</btn>      
-//     </div> */}
-    
-    
-//     <style jsx>{`
-//     div{
-//       text-align : center;
-//       padding-bottom : 15px;
-//       padding-top : 15px;
-//     }
-//     // btn{
-//     //   float : center;
-//     // }
-//     // space{
-//     //   margin : 20px;
-//     //   float : center;
-//     // }
-//     `}</style>
-//     </>
+  return <h1>{userinfo.year}</h1>;
+}
 
-//   );
-// }
+export async function getServerSideProps(props) {
+  await axios.post("http://localhost:10001/movies", {
+    title: "hi post from next",
+    year: 1425,
+  });
+  const response = await axios.get("http://127.0.0.1:10001/movies/2");
+  const data = response.data;
+
+  return {
+    props: {
+      item: data,
+    },
+  };
+}

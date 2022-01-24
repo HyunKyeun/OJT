@@ -1,5 +1,5 @@
-import { CreateMovieDTO } from 'src/dto/create-movie.dto';
-import { UpdateMovieDTO } from 'src/dto/update-movie.dto';
+import { CreateMovieDTO } from './dto/create-movie.dto';
+import { UpdateMovieDTO } from './dto/update-movie.dto';
 import { Movie } from './entities/movie.entity';
 import { MoviesService } from './movies.service';
 export declare class MoviesController {
@@ -9,5 +9,5 @@ export declare class MoviesController {
     getOne(movieID: number): Movie;
     create(movieData: CreateMovieDTO): void;
     remove(movieID: number): void;
-    patch(movieID: number, updateData: UpdateMovieDTO): void;
+    patch(movieID: number, UpdateData: UpdateMovieDTO): void;
 }

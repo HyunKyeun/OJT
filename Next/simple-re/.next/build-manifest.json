@@ -35,6 +35,11 @@
       "static/chunks/main.js",
       "static/chunks/pages/_error.js"
     ],
+    "/loggedin/[...params]": [
+      "static/chunks/webpack.js",
+      "static/chunks/main.js",
+      "static/chunks/pages/loggedin/[...params].js"
+    ],
     "/signUpPage": [
       "static/chunks/webpack.js",
       "static/chunks/main.js",

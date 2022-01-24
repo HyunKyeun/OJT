@@ -14,8 +14,8 @@ var __param = (this && this.__param) || function (paramIndex, decorator) {
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.MoviesController = void 0;
 const common_1 = require("@nestjs/common");
-const create_movie_dto_1 = require("../dto/create-movie.dto");
-const update_movie_dto_1 = require("../dto/update-movie.dto");
+const create_movie_dto_1 = require("./dto/create-movie.dto");
+const update_movie_dto_1 = require("./dto/update-movie.dto");
 const movie_entity_1 = require("./entities/movie.entity");
 const movies_service_1 = require("./movies.service");
 let MoviesController = class MoviesController {
@@ -26,17 +26,17 @@ let MoviesController = class MoviesController {
         return this.movieService.getAll();
     }
     getOne(movieID) {
-        console.log(typeof movieID);
         return this.movieService.getOne(movieID);
     }
     create(movieData) {
+        console.log('test');
         return this.movieService.create(movieData);
     }
     remove(movieID) {
         return this.movieService.deleteOne(movieID);
     }
-    patch(movieID, updateData) {
-        return this.movieService.update(movieID, updateData);
+    patch(movieID, UpdateData) {
+        return this.movieService.update(movieID, UpdateData);
     }
 };
 __decorate([

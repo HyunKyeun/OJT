@@ -13,7 +13,7 @@ exports.AppController = void 0;
 const common_1 = require("@nestjs/common");
 let AppController = class AppController {
     home() {
-        return " Welcome to my";
+        return 'hi';
     }
 };
 __decorate([
