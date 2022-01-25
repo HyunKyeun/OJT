@@ -18,6 +18,13 @@ export class UserinfoService {
     }
     return userinfo;
   }
+  // getOnebyname(name: string): Info {
+  //   const userinfo = this.userinfos.find((userinfo) => userinfo.name === name);
+  //   if (!userinfo) {
+  //     throw new NotFoundException(`Userinfo with name : ${name} not found`);
+  //   }
+  //   return userinfo;
+  // }
 
   deleteOne(id: string) {
     this.getOne(id);

@@ -25,6 +25,11 @@ export class UserinfoController {
     return this.userinfoService.getOne(ID);
   }
 
+  // @Get(':name')
+  // getOnebyname(@Param('name') name: string): Info {
+  //   return this.userinfoService.getOnebyname(name);
+  // }
+
   @Post()
   create(@Body() Userinfo: CreateUserinfoDTO) {
     console.log('posted');
