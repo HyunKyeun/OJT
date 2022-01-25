@@ -14,7 +14,7 @@ export class UserinfoService {
   getOne(id: string): Info {
     const userinfo = this.userinfos.find((userinfo) => userinfo.userid === id);
     if (!userinfo) {
-      throw new NotFoundException(`Userinfo with Key : ${id} not found`);
+      throw new NotFoundException(`Userinfo with ID : ${id} not found`);
     }
     return userinfo;
   }

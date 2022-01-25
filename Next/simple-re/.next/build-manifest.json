@@ -20,10 +20,10 @@
       "static/chunks/main.js",
       "static/chunks/pages/index.js"
     ],
-    "/LoginPage": [
+    "/Deleted": [
       "static/chunks/webpack.js",
       "static/chunks/main.js",
-      "static/chunks/pages/LoginPage.js"
+      "static/chunks/pages/Deleted.js"
     ],
     "/_app": [
       "static/chunks/webpack.js",
@@ -34,16 +34,6 @@
       "static/chunks/webpack.js",
       "static/chunks/main.js",
       "static/chunks/pages/_error.js"
-    ],
-    "/loggedin/[...params]": [
-      "static/chunks/webpack.js",
-      "static/chunks/main.js",
-      "static/chunks/pages/loggedin/[...params].js"
-    ],
-    "/signUpPage": [
-      "static/chunks/webpack.js",
-      "static/chunks/main.js",
-      "static/chunks/pages/signUpPage.js"
     ]
   },
   "ampFirstPages": []

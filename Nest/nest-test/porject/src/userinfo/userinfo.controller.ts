@@ -27,16 +27,19 @@ export class UserinfoController {
 
   @Post()
   create(@Body() Userinfo: CreateUserinfoDTO) {
+    console.log('posted');
     return this.userinfoService.create(Userinfo);
   }
 
   @Delete(':id')
   remove(@Param('id') ID: string) {
+    console.log('deleted');
     return this.userinfoService.deleteOne(ID);
   }
 
   @Patch(':id')
   patch(@Param('id') ID: string, @Body() UpdateData: UpdateUserinfoDTO) {
+    console.log('patched');
     return this.userinfoService.update(ID, UpdateData);
   }
 }
