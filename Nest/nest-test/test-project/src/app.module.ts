@@ -7,7 +7,7 @@ import { UserinfoService } from './userinfo/userinfo.service';
 
 @Module({
   imports: [MoviesModule],
-  controllers: [AppController, UserinfoController],
-  providers: [UserinfoService],
+  controllers: [AppController],
+  providers: [],
 })
 export class AppModule {}
