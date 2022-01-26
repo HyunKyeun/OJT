@@ -9,14 +9,13 @@ import "react-toastify/dist/ReactToastify.css";
 import axios from "axios";
 
 export default function LoginPage() {
-  const TempID = process.env.NEXT_PUBLIC_TEMP_ID;
-  const TempPW = process.env.NEXT_PUBLIC_TEMP_PW;
-
   const router = useRouter();
 
+  // input 박스 data가 바뀔때마다 캐치하여 저장
   const [changedUserid, setchangeUserid] = useState("");
   const [changedUserpw, setchangeUserpw] = useState("");
-
+  // 클릭시 아이디, 비번 확인해서  axios로 nest에 데이터 받아오기
+  // 받아온 데이터와 입력된 id, pw 일치하면 넘어가고 아니면 에러 토스트
   const onClick = (userid, userpw) => {
     {
       userid === "" || userpw === ""
@@ -32,10 +31,6 @@ export default function LoginPage() {
               toast(`There are no user ID : ${userid}`);
             });
     }
-  };
-
-  const onClickToast = () => {
-    toast("I didnt make it yet");
   };
   return (
     <sig>
@@ -74,8 +69,10 @@ export default function LoginPage() {
           <a>만든다 너는 없으면 아이디</a>
         </Link>
       </div>
-      <div className="btn" onClick={() => onClickToast()}>
-        <a>찾는다 너는 까먹은 아이디</a>
+      <div className="btn">
+        <Link href="/Finding">
+          <a>찾는다 너는 까먹은 아이디</a>
+        </Link>
       </div>
 
       <style jsx>{`

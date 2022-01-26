@@ -14,6 +14,10 @@ export default function LoginPage() {
   const [changedName, setchangeName] = useState("");
   const [changedUserid, setchangeUserid] = useState("");
   const [changedUserpw, setchangeUserpw] = useState("");
+
+  // 1. id가 빈칸이 아닐때. axios로 받아오기, 아니면 아이디를 입력해주세요
+  // 2. 받아온값을 토대로 아이디 pw  확인 , email, 이름이 빈칸이 아닌경우 patch로 수정, 아니면 패스워드 틀렷으면 틀림, 모든 정보를 입력하세요
+  // 3. 다 맞으면 수정 페이지로, 그외의 언해피한 상황의 경우 에러 발생 미안
   const onClick = (email, username, userid, userpw) => {
     {
       userid === ""

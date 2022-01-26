@@ -13,6 +13,11 @@ export default function LoginPage() {
   const [changedUserid, setchangeUserid] = useState("");
   const [changedUserpw, setchangeUserpw] = useState("");
   const [changedUserpw2, setchangeUserpw2] = useState("");
+
+  // 필요 변수 id pw pw재입력
+  // 1. 등록된 id pw를 확인후
+  // 2. pw와 재입력 pw가 같으면
+  // 3. 삭제
   const onClick = (userid, userpw, userpw2) => {
     {
       userid === ""

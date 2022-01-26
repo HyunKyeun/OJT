@@ -15,6 +15,7 @@ export default function signUpPage() {
   const [changedUserpw, setchangeUserpw] = useState("");
   const router = useRouter();
 
+  // 전부 빈칸이 아닌경우...  포스트 하기  하나라도 비어있으면 에러 띄우기
   const onClick = (email, username, userid, userpw) => {
     email === "" || username === "" || userid === "" || userpw === ""
       ? toast("Put all material")
@@ -44,6 +45,7 @@ export default function signUpPage() {
           id="email"
           placeholder="E-Mail"
           type="email"
+          // 변화한값을 읽어내는 이벤트 ㄴ -> 나
           onChange={(e) => setchangeEmail(e.target.value)}
         />
       </div>

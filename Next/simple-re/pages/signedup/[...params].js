@@ -3,6 +3,8 @@ import Custombtn from "../../components/custombtn";
 import React from "react";
 import { useRouter } from "next/router";
 
+// router로 받아온 id를 띄움
+
 export default function SignedUpPage({ params }) {
   const router = useRouter();
   let temp = params[0];

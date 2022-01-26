@@ -5,8 +5,10 @@ import { UserinfoService } from './userinfo/userinfo.service';
 import { UserinfoModule } from './userinfo/userinfo.module';
 import { MongooseModule } from '@nestjs/mongoose';
 
+
+// 모듈로  userinfo 모듈을 이용함니다
 @Module({
-  imports: [UserinfoModule, MongooseModule.forRoot('mongodb://localhost/nest')],
+  imports: [UserinfoModule],
   controllers: [AppController],
   providers: [AppService],
 })

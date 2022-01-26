@@ -3,6 +3,7 @@ import Custombtn from "../../components/custombtn";
 import React from "react";
 import { useRouter } from "next/router";
 
+//router로 id 만 받아옴
 export default function ModifiedPage({ params }) {
   const router = useRouter();
   let temp = params[0];
