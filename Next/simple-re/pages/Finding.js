@@ -9,21 +9,37 @@ import "react-toastify/dist/ReactToastify.css";
 import axios from "axios";
 
 export default function Finding() {
+  const [changedUserid, setchangeUserid] = useState("");
   const [changedName, setchangeName] = useState("");
+
+  const router = useRouter();
+
   const onClick = (username) => {
     username === ""
       ? toast("Put all material")
       : axios
-          .get(`http://127.0.0.1:10001/userinfo/${username}`)
+          .get(`http://127.0.0.1:10001/found/${username}`)
           .then(function (response) {
-            username === response.data.userid
-              ? toast(`Your ID and name looks like same? huh`)
-              : toast(`Your ID is ${response.data.userid}`);
+            toast(`Your ID is ${response.data.userid}`);
           })
           .catch(function (error) {
-            toast(`There is no Info about ${username}`);
+            toast(`There is no name about ${username}`);
           });
   };
+
+  const onClickchange = (userid) => {
+    userid === ""
+      ? toast("Put ID please")
+      : axios
+          .get(`http://127.0.0.1:10001/userinfo/${userid}`)
+          .then(function (response) {
+            router.push(`/Found/${response.data.userid}`);
+          })
+          .catch(function (error) {
+            toast(`There is no Info about ${userid}`);
+          });
+  };
+
   return (
     <sig>
       <ToastContainer />
@@ -39,6 +55,21 @@ export default function Finding() {
         <div onClick={() => onClick(changedName)}>
           <a>
             <Custombtn post="찾기" />
+          </a>
+        </div>
+      </div>
+      <div className="input">
+        <Lavel hf="userid" post="- ID" />
+        <Inputs
+          id="userid"
+          placeholder="아이디"
+          onChange={(e) => setchangeUserid(e.target.value)}
+        />
+      </div>
+      <div className="btn">
+        <div onClick={() => onClickchange(changedUserid)}>
+          <a>
+            <Custombtn post="비밀번호 수정하기" />
           </a>
         </div>
         <Link href="/">

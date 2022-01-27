@@ -1,11 +1,13 @@
 import { Injectable, NotFoundException } from '@nestjs/common';
-import { CreateUserinfoDTO } from './dto/create-userinfo.dto';
-import { UpdateUserinfoDTO } from './dto/update-userinfo.dto';
-import { Info } from './entities/userinfo.entity';
+import { CreateUserinfoDTO } from '../dto/create-userinfo.dto';
+import { UpdateUserinfoDTO } from '../dto/update-userinfo.dto';
+import { Info } from '../entities/userinfo.entity';
 
 @Injectable()
 export class UserinfoService {
   private userinfos: Info[] = [];
+  static getOne: any;
+  static deleteOne: any;
 
   // 전부 방출
   getAll(): Info[] {

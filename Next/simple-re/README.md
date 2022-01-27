@@ -40,13 +40,15 @@
 - 로그인 기능으로 nest에 저장된 데이터 불러오기
 - 회원 가입 기능으로 새로운 유저 데이터 저장
 - 아이디, 비밀번호를 이용하여 email, name 변경하기
+- 이름 입력하여 아이디 찾기
+- 비밀번호 수정하기 (아이디는 x)
+- 탈퇴기능
 
-- ***
+---
 
 ## 추가할 기능
 
 - next.config.js내에 rewrites 기능 (URL에 넘겨지는 정보 제한하기)
-- pw on/off 보이기
 - 로그인 및 회원 가입 input에 조건 걸기 ( 특수 문자 or split, 주소 문자 등등)
 - MongoDB
 - more awesome thing

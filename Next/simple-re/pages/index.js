@@ -3,7 +3,23 @@ import axios from "axios";
 export default function Home(props) {
   const count = props.item;
   console.log(count);
-  return <h1>{count} user Info's are in Nest server!</h1>;
+  return (
+    <>
+      <div className="main">
+        <h1>{count} user Info's are in Nest server!</h1>
+      </div>
+      <style jsx>{`
+        .main {
+          display: flex;
+          width: 100%;
+          margin-top: 10px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+        }
+      `}</style>
+    </>
+  );
 }
 
 //현재 nest에 저장된 갯수 확인

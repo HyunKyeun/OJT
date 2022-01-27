@@ -7,10 +7,10 @@ import {
   Patch,
   Post,
 } from '@nestjs/common';
-import { UpdateUserinfoDTO } from './dto/update-userinfo.dto';
-import { CreateUserinfoDTO } from './dto/create-userinfo.dto';
+import { UpdateUserinfoDTO } from '../dto/update-userinfo.dto';
+import { CreateUserinfoDTO } from '../dto/create-userinfo.dto';
 import { UserinfoService } from './userinfo.service';
-import { Info } from './entities/userinfo.entity';
+import { Info } from '../entities/userinfo.entity';
 @Controller('userinfo')
 export class UserinfoController {
   constructor(readonly userinfoService: UserinfoService) {}

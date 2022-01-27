@@ -37,8 +37,8 @@ export default function LoginPage() {
                       toast(`Unexpected error occuried sry`);
                     })
                 : userpw !== userpw2
-                ? toast(`puted two PW are Wrong`)
-                : toast(`PW is wrong `);
+                ? toast(`plz put pw correctly`)
+                : toast(`you put wrong pw`);
             })
             .catch(function (error) {
               toast(`There are no user ID : ${userid}`);
