@@ -33,13 +33,15 @@
   - URL로 넘어온 데이터 -> DTO form을 거치고 -> 넘어간다
   - 서버 실시간 확인 및, 유효성 검사
 - Pipe
-  app.useGlobalPipes(
-  new ValidationPipe({
-  whitelist : true,
-  forbidNonWhitelisted : true,
-  transform : true,
-  })
-  );
+  ```
+    app.useGlobalPipes(
+    new ValidationPipe({
+    whitelist : true,
+    forbidNonWhitelisted : true,
+    transform : true,
+    })
+    );
+  ```
   - whitelist : entity에 선언된 변수 사용시에만 request
   - forbidNonWhitelisted : entity에 선언되지 않은 변수 사용시 bad request
   - transform : 유저들의 post를 실제 타입으로 변환
@@ -65,3 +67,8 @@
 - end to end test
 - 사용자가 사용하는 모든기능을 테스트하여 결과물을 확인할때
   한번에 테스트 하기
+
+# Next and Nest
+
+- 다른 사이트에서 nest 서버에 접속할경우 보안용으로 차단 하는 CORS
+- 허용하는 사이트를 설정하거나 \*로 모두 해제(보안 취약)

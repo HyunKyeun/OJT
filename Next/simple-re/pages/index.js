@@ -1,54 +1,35 @@
+import axios from "axios";
 
-import styles from '../styles/Home.module.css'
-export default function Home() {
+export default function Home(props) {
+  const count = props.item;
+  console.log(count);
   return (
-    <h1>This should be main </h1>
+    <>
+      <div className="main">
+        <h1>{count} user Info's are in Nest server!</h1>
+      </div>
+      <style jsx>{`
+        .main {
+          display: flex;
+          width: 100%;
+          margin-top: 10px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+        }
+      `}</style>
+    </>
   );
-} 
+}
 
-// export default function Home() {
-//   return ( 
-//     <>
-//     <div>
-//     Welcome
-//     </div>
-//     <div>
-//       here should be ID
-//     </div>
-//     <div>
-//     Here shoud be ID box
-//     </div>
-//     <div>
-//       here should be PW
-//     </div>
-//     <div>
-//       here should be PW box
-//     </div>
-//     <div>
-//       here should be Login box
-//     </div>
-//     {/* <div>
-//       <btn>btn1</btn>
-//       <space></space>
-//       <btn>btn2</btn>      
-//     </div> */}
-    
-    
-//     <style jsx>{`
-//     div{
-//       text-align : center;
-//       padding-bottom : 15px;
-//       padding-top : 15px;
-//     }
-//     // btn{
-//     //   float : center;
-//     // }
-//     // space{
-//     //   margin : 20px;
-//     //   float : center;
-//     // }
-//     `}</style>
-//     </>
+//현재 nest에 저장된 갯수 확인
+export async function getServerSideProps(props) {
+  const response = await axios.get("http://127.0.0.1:10001/userinfo/");
+  const data = response.data.length;
 
-//   );
-// }
+  return {
+    props: {
+      item: data,
+    },
+  };
+}

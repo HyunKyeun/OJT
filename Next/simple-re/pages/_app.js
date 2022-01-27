@@ -1,15 +1,14 @@
 import "../styles/globals.css";
 import Layout from "../components/layout";
 
-
 export default function MyApp({ Component, pageProps }) {
-  return( 
+  return (
     <>
-  <Layout>
-  <Component {...pageProps} />
-  </Layout>
-  <div id ="root-modal" />
-  </>
-
+      <div id="wrapper">
+        <Layout>
+          <Component {...pageProps} />
+        </Layout>
+      </div>
+    </>
   );
 }
