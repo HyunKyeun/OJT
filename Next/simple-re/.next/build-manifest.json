@@ -15,10 +15,25 @@
     "static/development/_middlewareManifest.js"
   ],
   "pages": {
+    "/": [
+      "static/chunks/webpack.js",
+      "static/chunks/main.js",
+      "static/chunks/pages/index.js"
+    ],
     "/Finding": [
       "static/chunks/webpack.js",
       "static/chunks/main.js",
       "static/chunks/pages/Finding.js"
+    ],
+    "/Found/[...params]": [
+      "static/chunks/webpack.js",
+      "static/chunks/main.js",
+      "static/chunks/pages/Found/[...params].js"
+    ],
+    "/Modified/[...params]": [
+      "static/chunks/webpack.js",
+      "static/chunks/main.js",
+      "static/chunks/pages/Modified/[...params].js"
     ],
     "/_app": [
       "static/chunks/webpack.js",
