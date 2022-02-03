@@ -15,15 +15,15 @@
     "static/development/_middlewareManifest.js"
   ],
   "pages": {
-    "/DeletePage": [
+    "/": [
       "static/chunks/webpack.js",
       "static/chunks/main.js",
-      "static/chunks/pages/DeletePage.js"
+      "static/chunks/pages/index.js"
     ],
-    "/Deleted": [
+    "/LoginPage": [
       "static/chunks/webpack.js",
       "static/chunks/main.js",
-      "static/chunks/pages/Deleted.js"
+      "static/chunks/pages/LoginPage.js"
     ],
     "/_app": [
       "static/chunks/webpack.js",
