@@ -3,6 +3,7 @@ import {
   Controller,
   Delete,
   Get,
+  HttpException,
   Param,
   Patch,
   Post,
@@ -36,14 +37,14 @@ export class UserinfoController {
     return this.userinfoService.create(Userinfo);
   }
   // 지우기
-  @Delete(':id')
-  remove(@Param('id') ID: string) {
-    console.log('deleted');
-    return this.userinfoService.deleteOne(ID);
-  }
+  // @Delete(':id')
+  // remove(@Param('id') ID: string, @Body() deleteData) {
+  //   console.log('deleted');
+  //   return this.userinfoService.deleteOne(ID, deleteData);
+  // }
   // 일부분 수정하기
   @Patch(':id')
-  patch(@Param('id') ID: string, @Body() UpdateData: UpdateUserinfoDTO) {
+  patch(@Param('id') ID: string, @Body() UpdateData) {
     console.log('patched');
     return this.userinfoService.update(ID, UpdateData);
   }

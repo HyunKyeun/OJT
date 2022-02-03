@@ -23,7 +23,7 @@ export default function Finding() {
             toast(`Your ID is ${response.data.userid}`);
           })
           .catch(function (error) {
-            toast(`There is no name about ${username}`);
+            toast(error.response.data.error);
           });
   };
 
@@ -36,7 +36,7 @@ export default function Finding() {
             router.push(`/Found/${response.data.userid}`);
           })
           .catch(function (error) {
-            toast(`There is no Info about ${userid}`);
+            toast(error.response.data.error);
           });
   };
 

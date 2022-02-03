@@ -21,14 +21,15 @@ export default function LoginPage() {
       userid === "" || userpw === ""
         ? toast("Please write ID and PW")
         : axios
-            .get(`http://127.0.0.1:10001/userinfo/${userid}`)
+            .post(`http://127.0.0.1:10001/login/${userid}`, {
+              userid: `${userid}`,
+              userpw: `${userpw}`,
+            })
             .then(function (response) {
-              response.data.userid === userid && response.data.userpw === userpw
-                ? router.push(`loggedin/${userid}`)
-                : toast("Your PW isn't correct");
+              router.push(`loggedin/${userid}`);
             })
             .catch(function (error) {
-              toast(`There are no user ID : ${userid}`);
+              toast(error.response.data.error);
             });
     }
   };

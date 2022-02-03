@@ -15,18 +15,19 @@ export default function LoggedinPage({ params }) {
   const [changedUserpw, setchangeUserpw] = useState("");
   const [changedUserpw2, setchangeUserpw2] = useState("");
 
-  const onClick = (userID, userpw, userpw2) => {
-    userpw === "" || userpw2 === ""
+  const onClick = (userID, userpw1, userpw2) => {
+    userpw1 === "" || userpw2 === ""
       ? toast("Put all material")
       : axios
           .patch(`http://127.0.0.1:10001/userinfo/${userID}`, {
-            userpw: `${userpw}`,
+            userpw1: `${userpw1}`,
+            userpw2: `${userpw2}`,
           })
           .then(function (response) {
             router.push(`/Modified/${userID}`);
           })
           .catch(function (error) {
-            toast("Unexpected error");
+            toast(error.response.data.error);
           });
   };
   return (

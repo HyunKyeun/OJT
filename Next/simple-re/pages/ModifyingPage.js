@@ -23,29 +23,16 @@ export default function LoginPage() {
       userid === ""
         ? toast("Put your ID ")
         : axios
-            .get(`http://127.0.0.1:10001/userinfo/${userid}`)
+            .patch(`http://127.0.0.1:10001/login/${userid}`, {
+              userpw: `${userpw}`,
+              email: `${email}`,
+              name: `${username}`,
+            })
             .then(function (response) {
-              response.data.userid === userid &&
-              response.data.userpw === userpw &&
-              email !== "" &&
-              username !== ""
-                ? axios
-                    .patch(`http://127.0.0.1:10001/userinfo/${userid}`, {
-                      email: `${email}`,
-                      name: `${username}`,
-                    })
-                    .then(function (response) {
-                      router.push(`/Modified/${userid}`);
-                    })
-                    .catch(function (error) {
-                      toast(`Unexpected error occuried sry`);
-                    })
-                : response.data.userpw !== userpw
-                ? toast(`PW is Wrong`)
-                : toast(`Put all material`);
+              router.push(`/Modified/${userid}`);
             })
             .catch(function (error) {
-              toast(`There are no user ID : ${userid}`);
+              toast(error.response.data.error);
             });
     }
   };

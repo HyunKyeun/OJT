@@ -1,6 +1,7 @@
 import { UserinfoService } from './../userinfo/userinfo.service';
 import { Info } from './../entities/userinfo.entity';
 import { Injectable, NotFoundException } from '@nestjs/common';
+import { HttpException, HttpStatus } from '@nestjs/common';
 
 @Injectable()
 export class FoundService {
@@ -16,7 +17,13 @@ export class FoundService {
       (userinfo) => userinfo.name === name,
     );
     if (!userinfo) {
-      throw new NotFoundException(`Userinfo with name : ${name} not found`);
+      throw new HttpException(
+        {
+          status: HttpStatus.NOT_FOUND,
+          error: `There are no user ID : ${name}`,
+        },
+        HttpStatus.NOT_FOUND,
+      );
     }
     return userinfo;
   }

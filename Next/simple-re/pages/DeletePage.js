@@ -23,25 +23,15 @@ export default function LoginPage() {
       userid === ""
         ? toast("Put your ID ")
         : axios
-            .get(`http://127.0.0.1:10001/userinfo/${userid}`)
+            .post(`http://127.0.0.1:10001/delete/${userid}`, {
+              userpw1: `${userpw}`,
+              userpw2: `${userpw2}`,
+            })
             .then(function (response) {
-              response.data.userid === userid &&
-              response.data.userpw === userpw &&
-              userpw === userpw2
-                ? axios
-                    .delete(`http://127.0.0.1:10001/userinfo/${userid}`)
-                    .then(function (response) {
-                      router.push(`/Deleted`);
-                    })
-                    .catch(function (error) {
-                      toast(`Unexpected error occuried sry`);
-                    })
-                : userpw !== userpw2
-                ? toast(`plz put pw correctly`)
-                : toast(`you put wrong pw`);
+              router.push(`/Deleted`);
             })
             .catch(function (error) {
-              toast(`There are no user ID : ${userid}`);
+              toast(error.response.data.error);
             });
     }
   };
