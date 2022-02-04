@@ -11,43 +11,39 @@ export default function Logo() {
             <img src="/vercel.svg" />
           </a>
         </Link>
-        {/* {!user.isLogged &&( */}
-        <btn>
-          <Link href="/Finding">
-            <a>
-              <Custombtn post="아이디 찾기" />
-            </a>
-          </Link>
-          <Link href="/signUpPage">
-            <a>
-              <Custombtn post="회원가입" />
-            </a>
-          </Link>
-          <Link href="/LoginPage">
-            <a>
-              <Custombtn post="로그인" />
-            </a>
-          </Link>
-        </btn>
-        {/* )} */}
-        {/* {user.isLogged &&(
-                <btn>
-                <a>안녕</a>
-                <Link href="/LoginPage">
-                <a><Custombtn post="로그아웃"/></a>
-                </Link>
-            </btn>
-            )} */}
       </div>
+
+      <btn>
+        <Link href="/Finding">
+          <a>
+            <Custombtn post="아이디 찾기" />
+          </a>
+        </Link>
+        <Link href="/signUpPage">
+          <a>
+            <Custombtn post="회원가입" />
+          </a>
+        </Link>
+        <Link href="/LoginPage">
+          <a>
+            <Custombtn post="로그인" />
+          </a>
+        </Link>
+      </btn>
 
       <style jsx>{`
         logo {
           display: flex;
           width: 100%;
           flex-direction: column;
+          margin: 0 auto;
           padding-top: 10px;
           padding-bottom: 10px;
           box-shadow: rgba(0, 0, 0, 0.8) 0px 1px 12px;
+          align-items: center;
+        }
+        logo:hover btn {
+          display: flex;
         }
         img {
           max-width: 100px;
@@ -66,7 +62,7 @@ export default function Logo() {
         }
 
         btn {
-          margin-left: auto;
+          display: none;
         }
       `}</style>
     </logo>
