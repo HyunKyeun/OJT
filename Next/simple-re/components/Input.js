@@ -22,6 +22,7 @@ export default function Inputs({
           div {
             display: flex;
             align-items: center;
+
             justify-content: center;
           }
           .tag {

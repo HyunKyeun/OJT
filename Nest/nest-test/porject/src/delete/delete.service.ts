@@ -1,6 +1,7 @@
 import {
   HttpException,
   HttpStatus,
+  Inject,
   Injectable,
   NotFoundException,
 } from '@nestjs/common';
@@ -12,12 +13,19 @@ import { Info } from './../entities/userinfo.entity';
 
 @Injectable()
 export class DeleteService {
-  deleteOne(id: string, deleteData) {
-    console.log(deleteData);
-    const userinfo = UserinfoService.userinfos.find(
-      (userinfo) => userinfo.userid === id,
-    );
-    if (!userinfo) {
+  constructor(
+    @Inject('Userinfo')
+    private client,
+  ) {}
+
+  async deleteOne(id: string, deleteData) {
+    // console.log(deleteData);
+    const info = await this.client
+      .db('Userinfo')
+      .collection('info')
+      .findOne({ userid: `${id}` });
+    // console.log(info);
+    if (!info) {
       throw new HttpException(
         {
           status: HttpStatus.NOT_FOUND,
@@ -35,7 +43,7 @@ export class DeleteService {
         HttpStatus.FORBIDDEN,
       );
     }
-    if (userinfo.userpw !== deleteData.userpw1) {
+    if (info.userpw !== deleteData.userpw1) {
       throw new HttpException(
         {
           status: HttpStatus.FORBIDDEN,
@@ -44,8 +52,9 @@ export class DeleteService {
         HttpStatus.FORBIDDEN,
       );
     }
-    UserinfoService.userinfos = UserinfoService.userinfos.filter(
-      (userinfo) => userinfo.userid !== id,
-    );
+    await this.client
+      .db('Userinfo')
+      .collection('info')
+      .deleteOne({ userid: `${id}` });
   }
 }

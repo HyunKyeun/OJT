@@ -22,26 +22,21 @@ export class UserinfoController {
   @Get()
   @ApiOperation({
     summary: '전부 받아오기 (쓰진 않음)',
-    description: 'nest에 저장된 임시 데이터 전부 불러올..기능',
+    description: 'Mongo에 저장된 데이터 전부 불러오는기능',
   })
-  @ApiBody({
-    description: '',
-  })
-  getAll(): Info[] {
+  getAll() {
     return this.userinfoService.getAll();
   }
   // userid를 이용한 get api를 불러올시 사용
   // ex ) /find/{id}, /find/{name} 처럼. 같은 주소로 다른것을 Get하여 쓰지 않는다.
   // 쓰고싶으면 새로운 컨트롤러.. 뭐 등등 만들어서 씁시다
+
   @Get(':id')
   @ApiOperation({
     summary: '해당 id 를 이용하여 정보 받아오기',
     description: 'nest에 저장된 데이터중 하나를 받아올 기능',
   })
-  @ApiBody({
-    description: '',
-  })
-  getOne(@Param('id') ID: string): Info {
+  getOne(@Param('id') ID: string) {
     return this.userinfoService.getOne(ID);
   }
 
@@ -55,14 +50,14 @@ export class UserinfoController {
   @ApiBody({
     description: '',
   })
-  create(@Body() Userinfo: CreateUserinfoDTO) {
-    console.log('posted');
+  create(@Body() Userinfo) {
+    // console.log('posted');
     return this.userinfoService.create(Userinfo);
   }
   // 지우기
   // @Delete(':id')
   // remove(@Param('id') ID: string, @Body() deleteData) {
-  //   console.log('deleted');
+  // console.log('deleted');
   //   return this.userinfoService.deleteOne(ID, deleteData);
   // }
   // 일부분 수정하기
@@ -75,7 +70,7 @@ export class UserinfoController {
     description: '',
   })
   patch(@Param('id') ID: string, @Body() UpdateData) {
-    console.log('patched');
+    // console.log('patched');
     return this.userinfoService.update(ID, UpdateData);
   }
 }

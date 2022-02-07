@@ -18,7 +18,7 @@ export class LoginController {
   @ApiBody({
     description: '',
   })
-  getOne(@Param('id') id: string, @Body() useridpw): Info {
+  getOne(@Param('id') id: string, @Body() useridpw) {
     return this.loginservice.getOne(id, useridpw);
   }
 

@@ -18,21 +18,21 @@ export class FoundController {
   @ApiBody({
     description: '',
   })
-  getOne(@Param('name') name: string): Info {
-    console.log('find name');
+  getOne(@Param('name') name: string) {
+    // console.log('find name');
     return this.foundservice.findname(name);
   }
 
   @Patch(':id')
   @ApiOperation({
-    summary: '패스워드 수정',
+    summary: '패스워드 수정...인데.. 안?씀',
     description: '패스워드 새로 입력시 변경',
   })
   @ApiBody({
     description: '',
   })
   patch(@Param('id') ID: string, @Body() Updatepw: UpdateUserinfoDTO) {
-    console.log('patched pw');
+    // console.log('patched pw');
     return this.foundservice.updatepw(ID, Updatepw);
   }
 }

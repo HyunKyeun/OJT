@@ -1,6 +1,7 @@
 import {
   HttpException,
   HttpStatus,
+  Inject,
   Injectable,
   NotFoundException,
 } from '@nestjs/common';
@@ -12,15 +13,21 @@ import { Info } from './../entities/userinfo.entity';
 
 @Injectable()
 export class LoginService {
+  constructor(
+    @Inject('Userinfo')
+    private client,
+  ) {}
   // 전부 방출
   // custom error 로 테스트확인
-  getOne(id: string, useridpw): Info {
-    console.log(useridpw.userid);
-    console.log(useridpw.userpw);
-    const userinfo = UserinfoService.userinfos.find(
-      (userinfo) => userinfo.userid === id,
-    );
-    if (!userinfo) {
+  async getOne(id: string, useridpw) {
+    // console.log(useridpw.userid);
+    // console.log(useridpw.userpw);
+    const info = await this.client
+      .db('Userinfo')
+      .collection('info')
+      .findOne({ userid: `${id}` });
+    // console.log(info);
+    if (!info) {
       throw new HttpException(
         {
           status: HttpStatus.NOT_FOUND,
@@ -29,10 +36,8 @@ export class LoginService {
         HttpStatus.NOT_FOUND,
       );
     }
-    if (
-      userinfo.userid !== useridpw.userid ||
-      userinfo.userpw !== useridpw.userpw
-    ) {
+
+    if (info.userid !== useridpw.userid || info.userpw !== useridpw.userpw) {
       throw new HttpException(
         {
           status: HttpStatus.FORBIDDEN,
@@ -41,14 +46,17 @@ export class LoginService {
         HttpStatus.FORBIDDEN,
       );
     }
-    return userinfo;
+    return info;
   }
-  update(id: string, updateData) {
-    console.log(updateData);
-    const userinfo = UserinfoService.userinfos.find(
-      (userinfo) => userinfo.userid === id,
-    );
-    if (!userinfo) {
+
+  async update(id: string, updateData) {
+    // console.log(updateData);
+    const info = await this.client
+      .db('Userinfo')
+      .collection('info')
+      .findOne({ userid: `${id}` });
+    // console.log(info);
+    if (!info) {
       throw new HttpException(
         {
           status: HttpStatus.NOT_FOUND,
@@ -57,7 +65,7 @@ export class LoginService {
         HttpStatus.NOT_FOUND,
       );
     }
-    if (updateData.userpw !== userinfo.userpw) {
+    if (updateData.userpw !== info.userpw) {
       throw new HttpException(
         {
           status: HttpStatus.FORBIDDEN,
@@ -84,11 +92,11 @@ export class LoginService {
       email: `${updateData.email}`,
       name: `${updateData.name}`,
     };
-    console.log(newinfo);
+    // console.log(newinfo);
 
-    UserinfoService.userinfos = UserinfoService.userinfos.filter(
-      (userinfo) => userinfo.userid !== id,
-    );
-    UserinfoService.userinfos.push({ ...userinfo, ...newinfo });
+    await this.client
+      .db('Userinfo')
+      .collection('info')
+      .update({ userid: `${id}` }, { $set: newinfo });
   }
 }

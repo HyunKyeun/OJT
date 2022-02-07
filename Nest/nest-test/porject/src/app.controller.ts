@@ -9,17 +9,7 @@ export class AppController {
   constructor(private readonly appService: AppService) {}
 
   @Get()
-  @ApiOperation({
-    summary: 'test11',
-    description: 'test1',
-  })
-  @ApiBody({
-    description: 'test111',
-  })
-  // @ApiResponse({
-  //   description: 'test2',
-  // })
-  getHello(): string {
+  getHello() {
     return this.appService.getHello();
   }
 }

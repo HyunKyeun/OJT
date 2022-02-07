@@ -36,7 +36,7 @@ export default function Logo() {
           display: flex;
           width: 100%;
           flex-direction: column;
-          margin: 0 auto;
+          margin-bottom: 10px;
           padding-top: 10px;
           padding-bottom: 10px;
           box-shadow: rgba(0, 0, 0, 0.8) 0px 1px 12px;

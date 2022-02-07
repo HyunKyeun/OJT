@@ -6,7 +6,7 @@ export default function Home(props) {
   return (
     <>
       <div className="main">
-        <h1>{count} user Info's are in Nest server!</h1>
+        <h1>{count} user Info's are in MongoDB!</h1>
       </div>
       <style jsx>{`
         .main {

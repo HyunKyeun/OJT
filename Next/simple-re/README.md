@@ -6,7 +6,7 @@
   - Next
 - End
   - Nest
-  - Mongo
+  - Mongo(want...)
 
 ---
 
@@ -21,8 +21,6 @@
   - 특정 상황에서 버튼 클릭시 동일하게 이동
   - useState기능을 이용하여 각 input에 입력된값 저장
   - useRouter 기능을 이용하여 usestate값들을 다른 페이지로 이동
-  - [...params] 형태로 어떠한 입력값에도 ("," , "/"제외) 대응 가능한 페이지 구현
-  - Router로 보내온 props의 데이터를 split하여 각각의 데이터로 변환
 - 로그인 기능
   - 임시로 .env에 임의의 ID,PW 저장
   - 로그인 값 useState로 받아오기
@@ -45,6 +43,9 @@
 - 탈퇴기능
 - 좀더 어썸한 조건문 처리
 - 좀더 다양하고 세밀한 api 처리
+- swagger 세부 사항 표시
+- 네비게이션바(처럼 보이는) dropdown기능
+-
 
 ---
 
@@ -54,4 +55,6 @@
 - 로그인 및 회원 가입 input에 조건 걸기 ( 특수 문자 or split, 주소 문자 등등)
 - MongoDB
 - more awesome thing
-- swagger에 세부사항 표시
+- MongoDB really need it
+- 회원 가입시 이름에 숫자 들어가는거 방지
+- 이메일 형태 만족하기

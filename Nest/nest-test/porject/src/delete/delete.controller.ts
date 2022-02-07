@@ -27,7 +27,7 @@ export class DeleteController {
     description: '',
   })
   remove(@Param('id') ID: string, @Body() deleteData) {
-    console.log('deleted');
+    // console.log('deleted');
     return this.deleteservice.deleteOne(ID, deleteData);
   }
 }
